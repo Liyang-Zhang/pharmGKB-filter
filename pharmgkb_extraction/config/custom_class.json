@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "gene":[
+=======
+  "gene": [
+>>>>>>> 1a170f97da58dd9a6e351da95a3f0f5b1ed4a3b2
     "ABCB1",
     "ACYP2",
     "CDA",
@@ -24,7 +28,11 @@
     "XPC",
     "XRCC1"
   ],
+<<<<<<< HEAD
   "drug":[
+=======
+  "drug": [
+>>>>>>> 1a170f97da58dd9a6e351da95a3f0f5b1ed4a3b2
     "Cisplatin",
     "Carboplatin",
     "paclitaxel",
@@ -42,6 +50,7 @@
     "Bendamustine",
     "Lurbinectedin",
     "Capecitabine",
+<<<<<<< HEAD
     "Cyclophosphamide/doxorubicin/vincristine (CAV)"
   ],
   "phenotype":[
@@ -51,5 +60,21 @@
     "Lung Neoplasms",
     "Osteosarcoma",
     "Mesothelioma"
+=======
+    "Cyclophosphamide/doxorubicin/vincristine (CAV)",
+    "Platinum compounds"
+  ],
+  "phenotype": [
+    "Neoplasms",
+    "Carcinoma",
+    "Non-Small-Cell Lung"
+  ],
+  "level": [
+    "1A",
+    "1B",
+    "2A",
+    "2B",
+    "3"
+>>>>>>> 1a170f97da58dd9a6e351da95a3f0f5b1ed4a3b2
   ]
 }
