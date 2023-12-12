@@ -1,0 +1,60 @@
+{
+  "gene": [
+    "ABCB1",
+    "ACYP2",
+    "CDA",
+    "CEP72",
+    "CYP2C8",
+    "DPYD",
+    "DYNC2H1",
+    "ERCC1",
+    "ERCC2",
+    "GSTM1",
+    "GSTP1",
+    "KLC3",
+    "MTHFR",
+    "MTRR",
+    "NT5C2",
+    "RRM1",
+    "SLCO1B1",
+    "TEKT4",
+    "TPMT",
+    "TYMS",
+    "UMPS",
+    "XPC",
+    "XRCC1"
+  ],
+  "drug": [
+    "Cisplatin",
+    "Carboplatin",
+    "paclitaxel",
+    "docetaxel",
+    "etoposide",
+    "pemetrexed",
+    "vinorelbine",
+    "gemcitabine",
+    "nedaplatin",
+    "albumin-bound paclitaxel",
+    "Temozolomide",
+    "irinotecan",
+    "Lobaplatin",
+    "Topotecan",
+    "Bendamustine",
+    "Lurbinectedin",
+    "Capecitabine",
+    "Cyclophosphamide/doxorubicin/vincristine (CAV)",
+    "Platinum compounds"
+  ],
+  "phenotype": [
+    "Neoplasms",
+    "Carcinoma",
+    "Non-Small-Cell Lung"
+  ],
+  "level": [
+    "1A",
+    "1B",
+    "2A",
+    "2B",
+    "3"
+  ]
+}
