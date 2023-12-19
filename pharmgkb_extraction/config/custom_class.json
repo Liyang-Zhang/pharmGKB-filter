@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "gene":[
-=======
   "gene": [
->>>>>>> 1a170f97da58dd9a6e351da95a3f0f5b1ed4a3b2
     "ABCB1",
     "ACYP2",
     "CDA",
@@ -28,11 +24,7 @@
     "XPC",
     "XRCC1"
   ],
-<<<<<<< HEAD
-  "drug":[
-=======
   "drug": [
->>>>>>> 1a170f97da58dd9a6e351da95a3f0f5b1ed4a3b2
     "Cisplatin",
     "Carboplatin",
     "paclitaxel",
@@ -50,8 +42,45 @@
     "Bendamustine",
     "Lurbinectedin",
     "Capecitabine",
-<<<<<<< HEAD
     "Cyclophosphamide/doxorubicin/vincristine (CAV)"
+  ],
+  "phenotype_ld":[
+    "Carcinoma, Small Cell",
+    "Carcinoma, Squamous Cell;overall survival",
+    "Carcinoma, Squamous Cell;progression-free survival",
+    "Drug Toxicity",
+    "Drug Toxicity;Inflammatory Bowel Diseases;Pancreatitis",
+    "Drug Toxicity;Neoplasms",
+    "Drug Toxicity;Neoplasms;Neutropenia;Peripheral Nervous System Diseases",
+    "Drug Toxicity;Neoplasms;Ototoxicity",
+    "Drug Toxicity;Neurotoxicity Syndromes",
+    "Drug Toxicity;Neutropenia;Peripheral Nervous System Diseases;Toxic liver disease",
+    "Drug Toxicity;Psoriasis",
+    "Drug Toxicity;Thalassemia",
+    "Drug Toxicity;Tuberculosis",
+    "Drug Toxicity;hematotoxicity;Leukopenia;Lymphoma;mucositis;Neoplasms;Neutropenia;Osteosarcoma;Precursor Cell Lymphoblastic Leukemia-Lymphoma;primary central nervous system lymphoma;Thrombocytopenia;Toxic liver disease",
+    "Drug Toxicity;overall survival",
+    "Drug interaction with drug;Drug Toxicity",
+    "Neoplasm Metastasis",
+    "Neoplasms;Neurotoxicity Syndromes",
+    "Neoplasms;Neutropenia",
+    "Neoplasms;Osteonecrosis",
+    "Neoplasms;Pain",
+    "Neoplasms;nephrotoxicity",
+    "drug reaction with eosinophilia and systemic symptoms",
+    "drug reaction with eosinophilia and systemic symptoms;Epidermal Necrolysis, Toxic;Exanthema;Hypersensitivity;Stevens-Johnson Syndrome",
+    "drug reaction with eosinophilia and systemic symptoms;Epidermal Necrolysis, Toxic;Maculopapular Exanthema;severe cutaneous adverse reactions;Stevens-Johnson Syndrome",
+    "drug reaction with eosinophilia and systemic symptoms;Epidermal Necrolysis, Toxic;Stevens-Johnson Syndrome",
+    "drug reaction with eosinophilia and systemic symptoms;Epidermal Necrolysis, Toxic;severe cutaneous adverse reactions;Stevens-Johnson Syndrome",
+    "drug reaction with eosinophilia and systemic symptoms;HIV Infections;Stevens-Johnson Syndrome;Toxic liver disease",
+    "drug reaction with eosinophilia and systemic symptoms;Stevens-Johnson Syndrome",
+    "drug reaction with eosinophilia and systemic symptoms;severe cutaneous adverse reactions;Stevens-Johnson Syndrome",
+    "drug-induced liver injury",
+    "drug-induced liver injury;Hepatitis, Toxic;Toxic liver disease;Tuberculosis",
+    "drug-induced liver injury;Leukopenia;Precursor Cell Lymphoblastic Leukemia-Lymphoma;Thrombocytopenia",
+    "drug-induced liver injury;Multiple Sclerosis",
+    "drug-induced liver injury;Toxic liver disease",
+    "drug-induced liver injury;Tuberculosis"
   ],
   "phenotype":[
     "Neoplasms",
@@ -59,8 +88,7 @@
     "Non-Small-Cell Lung",
     "Lung Neoplasms",
     "Osteosarcoma",
-    "Mesothelioma"
-=======
+    "Mesothelioma",
     "Cyclophosphamide/doxorubicin/vincristine (CAV)",
     "Platinum compounds"
   ],
@@ -75,6 +103,5 @@
     "2A",
     "2B",
     "3"
->>>>>>> 1a170f97da58dd9a6e351da95a3f0f5b1ed4a3b2
   ]
 }
