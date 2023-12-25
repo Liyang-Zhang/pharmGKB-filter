@@ -1,9 +1,17 @@
 import json
+import logging
 from pathlib import Path
 
 import pandas as pd
 from intervaltree import IntervalTree
 from pysam import VariantFile
+
+from pharmgkb_extraction.logging.helper import LoggingLevel, config_console_debug_logger
+
+log = logging.getLogger(__name__)
+config_console_debug_logger(__name__)
+
+logging.basicConfig(level=LoggingLevel.INFO.upper())
 
 
 def any_in_string(items, string):
@@ -22,10 +30,10 @@ def add_common_filter_columns(
     phenotype_list = [phenotype.lower() for phenotype in data["phenotype"]]
     level_list = data["level"]
 
-    print(f"Gene list:{gene_list}")
-    print(f"Drug list: {drug_list}")
-    print(f"Phenotype list: {phenotype_list}")
-    print(f"Level list: {level_list}")
+    log.info(f"Gene list:{gene_list}")
+    log.info(f"Drug list: {drug_list}")
+    log.info(f"Phenotype list: {phenotype_list}")
+    log.info(f"Level list: {level_list}")
 
     df_cli_anno["phenotype_ld_1219"] = df_cli_anno["Phenotype(s)"].apply(
         lambda x: any_in_string(phenotype_list_ld, x) if isinstance(x, str) else False
