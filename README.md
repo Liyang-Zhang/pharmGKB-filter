@@ -1,4 +1,6 @@
-# pharmGKB-extraction
+# pharmGKB-filter
+
+Filter based on pharmGKB database
 
 ## dev
 
@@ -25,3 +27,9 @@ poetry install
 pre-commit install
 pre-commit run --all-files
 ```
+
+## function
+
+1. basic filter
+2. add genome position
+3. bed file filter
