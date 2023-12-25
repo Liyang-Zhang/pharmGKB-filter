@@ -1,6 +1,6 @@
 # pharmGKB-filter
 
-Filter based on pharmGKB database
+Filter pharmGKB database by several rules
 
 ## dev
 
@@ -33,3 +33,10 @@ pre-commit run --all-files
 1. basic filter
 2. add genome position
 3. bed file filter
+
+## usage
+
+1. fill the path in the pharmgkb_filter/lung65_chemo.py file
+2. ```bash
+   python -m pharmgkb_filter.lung65_chemo
+   ```
