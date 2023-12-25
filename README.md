@@ -10,8 +10,8 @@ Prerequisites
 - [pyenv](https://github.com/pyenv/pyenv)
 
 ```bash
-git clone https://github.com/Liyang-Zhang/pharmGKB-extraction.git
-cd pharmGKB-extraction
+git clone https://github.com/Liyang-Zhang/pharmGKB-filter.git
+cd pharmGKB-filter
 
 pyenv install 3.11.6
 poetry env use $(pyenv which python)
