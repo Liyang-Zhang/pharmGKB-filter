@@ -6,7 +6,7 @@ import pandas as pd
 from intervaltree import IntervalTree
 from pysam import VariantFile
 
-from pharmgkb_extraction.logging.helper import LoggingLevel, config_console_debug_logger
+from pharmgkb_filter.logging.helper import LoggingLevel, config_console_debug_logger
 
 log = logging.getLogger(__name__)
 config_console_debug_logger(__name__)
@@ -108,26 +108,14 @@ def add_interval_column(
 
 
 def main():
-    config_path = Path(
-        # "/Users/zhangliyang/repo/pharmGKB-extraction/pharmgkb_extraction/config/custom_class.json"
-        "/home/leon/repo/pharmGKB-extraction/pharmgkb_extraction/config/custom_class.json"
-    )
-    clinical_annotations_path = Path(
-        # "/Users/zhangliyang/repo/pharmGKB-extraction/tests/clinicalAnnotations/clinical_annotations.tsv"
-        "/home/leon/data/lung65/chemo/clinical_annotations.tsv"
-    )
-    rs_matched_vcf_path = Path(
-        "/home/leon/data/lung65/chemo/VariantHaplotypes_list_vep_autosome.vcf.gz"
-    )
-    bed_133 = Path("/home/leon/data/lung65/bed/133_gene.bed")
-    bed_188 = Path(
-        "/home/leon/data/lung65/bed/金域实体瘤188探针-designed-probe.slop60-cover.rmchr.bed"
-    )
+    # fill the path before running
+    config_path = Path()
+    clinical_annotations_path = Path()
+    rs_matched_vcf_path = Path()
+    bed_133 = Path()
+    bed_188 = Path()
 
-    # output_path = "/Users/zhangliyang/repo/pharmGKB-extraction/tests/clinicalAnnotations/lung65_clinical_annotation.tsv"
-    output_path = (
-        "/home/leon/repo/pharmGKB-extraction/tests/lung65_clinical_annotation.tsv"
-    )
+    output_path = ()
 
     df_cli_anno = pd.read_csv(clinical_annotations_path, sep="\t", header=0)
     df_cli_anno_common_filters = add_common_filter_columns(df_cli_anno, config_path)
