@@ -40,3 +40,12 @@ pre-commit run --all-files
 2. ```bash
    python -m pharmgkb_filter.lung65_chemo
    ```
+
+## process dbSNP VCF data by rs ID
+
+The script is in the test folder. RAM is the main constraint when choosing a batch size.
+
+Three main functions:
+1. convert each vcf record into a dictionary, {rs_id: vcf_record}
+2. merge a batch of dicts into one dict
+3. extract all pharmGKB rs IDs' vcf records from the merged dictionaries
