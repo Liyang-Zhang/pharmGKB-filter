@@ -18,6 +18,10 @@ def any_in_string(items, string):
     return any(item in string.lower() for item in items)
 
 
+def is_exact_match(items, string):
+    return any(item == string.lower() for item in items)
+
+
 def add_common_filter_columns(
     df_cli_anno: pd.DataFrame, config_path: Path
 ) -> pd.DataFrame:
@@ -26,7 +30,6 @@ def add_common_filter_columns(
 
     gene_list = [gene.lower() for gene in data["gene"]]
     drug_list = [drug.lower() for drug in data["drug"]]
-    phenotype_list_ld = [drug.lower() for drug in data["phenotype_ld"]]
     phenotype_list = [phenotype.lower() for phenotype in data["phenotype"]]
     level_list = data["level"]
 
@@ -35,9 +38,9 @@ def add_common_filter_columns(
     log.info(f"Phenotype list: {phenotype_list}")
     log.info(f"Level list: {level_list}")
 
-    df_cli_anno["phenotype_ld_1219"] = df_cli_anno["Phenotype(s)"].apply(
-        lambda x: any_in_string(phenotype_list_ld, x) if isinstance(x, str) else False
-    )
+    # df_cli_anno["phenotype_ld_1219"] = df_cli_anno["Phenotype(s)"].apply(
+    #    lambda x: is_exact_match(phenotype_list_ld, x) if isinstance(x, str) else False
+    # )
     df_cli_anno["Matches Drug"] = df_cli_anno["Drug(s)"].apply(
         lambda x: any_in_string(drug_list, x) if isinstance(x, str) else False
     )
@@ -45,7 +48,7 @@ def add_common_filter_columns(
         lambda x: any_in_string(gene_list, x) if isinstance(x, str) else False
     )
     df_cli_anno["Matches Phenotype"] = df_cli_anno["Phenotype(s)"].apply(
-        lambda x: any_in_string(phenotype_list, x) if isinstance(x, str) else False
+        lambda x: is_exact_match(phenotype_list, x) if isinstance(x, str) else False
     )
     df_cli_anno["Matches Level"] = df_cli_anno["Level of Evidence"].apply(
         lambda x: x in level_list if isinstance(x, str) else False
@@ -109,13 +112,19 @@ def add_interval_column(
 
 def main():
     # fill the path before running
-    config_path = Path()
-    clinical_annotations_path = Path()
-    rs_matched_vcf_path = Path()
-    bed_133 = Path()
-    bed_188 = Path()
+    config_path = Path(
+        "/home/leon/repo/pharmGKB-filter/pharmgkb_filter/config/custom_class.json"
+    )
+    clinical_annotations_path = Path(
+        "/home/leon/data/lung65/chemo/clinical_annotations.tsv"
+    )
+    rs_matched_vcf_path = Path(
+        "/home/leon/repo/pharmGKB-filter/resource/pharmGKB_rs_id_mapping_dbSNP156_template.vcf.gz"
+    )
+    bed_133 = Path("/home/leon/data/lung65/bed/133_gene.bed")
+    bed_188 = Path("/home/leon/data/lung65/bed/designed-probe.cover.rmchr.bed")
 
-    output_path = ()
+    output_path = Path("/home/leon/data/lung65/chemo/clinical_annotations_0111.tsv")
 
     df_cli_anno = pd.read_csv(clinical_annotations_path, sep="\t", header=0)
     df_cli_anno_common_filters = add_common_filter_columns(df_cli_anno, config_path)
